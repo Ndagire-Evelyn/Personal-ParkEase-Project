@@ -1,0 +1,433 @@
+/* index(login) */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+.login-body {
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("parkingme.png"); /* Replace with your image URL */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Keeps image fixed while scrolling */
+  background-size: cover; /* This is the key property */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.login {
+  align-content: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(15, 15, 15, 0.582), rgba(15, 15, 15, 0.582));
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.login #heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: rgb(116, 173, 190);
+}
+
+.login #p {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: appear 3s ease-out;
+   color: rgb(168, 235, 255);
+}
+
+.login #h5 {
+  color: rgb(5, 136, 243);
+}
+
+.login .mb-3 {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.login input {
+  border-radius: 7px;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #2008fa;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  outline: none;
+}
+
+.login label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #68b4f3;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.login input:focus {
+  border-bottom-color: rgb(6, 240, 240);
+}
+.login input:focus + label,
+.login input:valid + label {
+  top: -14px;
+  font-size: 13px;
+  color: rgb(6, 240, 240);
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  background: #146797;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+ transform: translateY(30px);
+}
+.login button:hover {
+  background: #007bff;
+}
+
+.login .error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* dashboard styles*/
+.dashboard {
+  background: #eef3f7;
+ }
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..00;1,100..900&display=swap');
+
+#attendants .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+#attendants .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+#attendants .navbar-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#attendants #h5 {
+    color: #fff;
+    font-size: 20px;
+}
+
+#attendants .navbar-container .navbar-menu {
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+#attendants .navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: rgb(253, 254, 255);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+#attendants .navbar-container .navbar-menu li a:hover,
+#attendants .navbar-container .navbar-menu li a.active {
+    color: #162530;
+    background: rgba(131, 192, 235, 0.8);
+    border: 2px solid #fff;
+}
+
+#attendants .navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#attendants .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive style */
+ @media (max-width: 800px) {
+    #attendants .navbar {
+        backdrop-filter: none;
+    }
+
+    #attendants .navbar-container .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    #attendants .navbar-container .navbar-menu.active {
+        display: flex;
+    }
+
+    #attendants .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+
+    #attendants .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+     #attendants .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #attendants .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+
+    }
+}
+ 
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
+  #attendants .main-content {
+  background: #eef3f7;
+    }
+
+  #attendants .topbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  }
+
+  #attendants .card {
+  border-radius: 10px;
+  }
+
+  #attendants .badge-parked {
+  background: green;
+  }
+
+  #attendants .badge-out {
+  background: gray;
+  }
+
+/* registration styles */
+.register-body {
+  background: hsla(220, 66%, 86%, 0.842);
+  }
+
+  .logo {
+  width: 35px;
+  height: 35px;
+  background: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  }
+
+  .container1{
+    align-content: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(198, 189, 250), rgb(148, 107, 243));
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  .card {
+  border-radius: 12px;
+  }
+
+  .nav-link.active {
+  font-weight: bold;
+  color: #0d6efd !important;
+  }
+
+/* Floating Tips */
+.tips {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 205px;
+  animation: float 3s infinite ease-in-out;
+}
+
+  @keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* services styles */
+.services {
+  background: linear-gradient(135deg, #f1f2f7, #041dfdf8);
+  min-height: 100vh;
+  font-family: "Segoe UI";
+}
+
+/* Welcome animation */
+#welcome {
+  font-size: 28px;
+  color: rgb(246, 246, 248);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s forwards;
+  border: #530463;
+  background-color: #365af86b;
+  border-radius: 20px;
+}
+
+/* Section cards */
+.section-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.section-card:hover {
+  transform: scale(1.05);
+}
+
+/* Button animation */
+.btn-custom {
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form box */
+.form-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* reports */
+body {
+  background: #f4f7fb;
+}
+.logo {
+  width: 35px;
+  height: 35px;
+  background: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.card {
+  border-radius: 14px;
+}
+.metric {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* vehiclesignout.html styles */
+body{background:#f4f7fb;}
+.logo {
+  width: 35px;
+  height: 35px;
+  background: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.card{border-radius:14px;}
+.fee-box{background:#eaf2ff;padding:12px;border-radius:10px;color:#0d6efd;}
+.badge-status{background:#ffe7a0;}
+.receipt-box{border:1px dashed #ccc;padding:20px;border-radius:10px;}
