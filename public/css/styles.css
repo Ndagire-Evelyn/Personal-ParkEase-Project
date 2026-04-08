@@ -176,7 +176,7 @@ body {
   padding: 0;
 }
 .login-body {
-  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("parkingme.png"); /* Replace with your image URL */
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/public/images/parkingme.png"); /* Replace with your image URL */
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed; /* Keeps image fixed while scrolling */
