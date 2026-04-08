@@ -11,7 +11,7 @@ head
 .container.d-flex.justify-content-center.align-items-center.vh-100
   .signup-card.col-md-6
     h2.text-center.mb-4.text-primary Create Your Account
-    form#signupForm
+    form#signupForm(method='post' action='/auth/signup')
       .row.mb-3
         .col.form-floating
           input#firstName.form-control(type='text' placeholder=' ' required='')

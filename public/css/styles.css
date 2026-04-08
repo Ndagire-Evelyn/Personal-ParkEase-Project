@@ -168,13 +168,6 @@ body {
     width: 100%;
 }
 
-/* index(login) */
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  padding: 0;
-}
 body{
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/images/parkingme.png"); /* Replace with your image URL */
   background-repeat: no-repeat;
