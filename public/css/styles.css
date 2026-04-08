@@ -175,7 +175,7 @@ body {
   font-family: Arial, sans-serif;
   padding: 0;
 }
-.login-body {
+.body{
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/public/images/parkingme.png"); /* Replace with your image URL */
   background-repeat: no-repeat;
   background-position: center center;
