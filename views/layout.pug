@@ -43,7 +43,7 @@ nav.navbar
           span.text-light.me-3.small 
             i.fa-solid.fa-user-circle.me-1 
             | Hi, #{user.firstName}
-            span.badge.bg-secondary.ms-1 #{user.role}
+          span.badge.bg-secondary.ms-1 #{user.role}
           a.btn.btn-outline-danger.btn-sm.fw-bold(href="/auth/logout") Log Out
         else 
           a.btn.btn-outline.light.me-2(href="/auth/login") Log in
@@ -54,3 +54,4 @@ footer.site-footer
       | &copy; 2026 ParkEase. All services served.
       br
       |  Smart Parking
+  script(src='/js/nav.js')
